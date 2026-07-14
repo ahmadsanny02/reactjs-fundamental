@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="steps">
+      <div className="numbers">
+        <div className="active">1</div>
+        <div className="">2</div>
+        <div className="">3</div>
+      </div>
+      <p className="message">Step: Dream</p>
+      <div className="buttons">
+        <button style={{ backgroundColor: "#526d82", color: "#fff" }}>
+          Prev
+        </button>
+        <button style={{ backgroundColor: "#526d82", color: "#fff" }}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }
