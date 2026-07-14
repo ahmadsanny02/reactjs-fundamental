@@ -1,7 +1,15 @@
-import logo from "./logo.svg";
 import "./index.css";
 
 function App() {
+  function handleNext() {
+    alert("Next button clicked");
+  }
+
+  function handlePrev() {
+    alert("Previous button clicked");
+  }
+
+
   return (
     <div className="steps">
       <div className="numbers">
@@ -11,10 +19,10 @@ function App() {
       </div>
       <p className="message">Step: Dream</p>
       <div className="buttons">
-        <button style={{ backgroundColor: "#526d82", color: "#fff" }}>
+        <button onClick={handlePrev} style={{ backgroundColor: "#526d82", color: "#fff" }}>
           Prev
         </button>
-        <button style={{ backgroundColor: "#526d82", color: "#fff" }}>
+        <button onClick={handleNext} style={{ backgroundColor: "#526d82", color: "#fff" }}>
           Next
         </button>
       </div>
