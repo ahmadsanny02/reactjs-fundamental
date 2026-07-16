@@ -21,7 +21,7 @@ function App() {
         <div className={step === 2 ? "active" : ""}>2</div>
         <div className={step === 3 ? "active" : ""}>3</div>
       </div>
-      <p className="message">Step: Dream</p>
+      <p className="message">Step {step}: Dream</p>
       <div className="buttons">
         <button
           onClick={handlePrev}
