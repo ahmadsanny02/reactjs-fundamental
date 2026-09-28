@@ -3,6 +3,7 @@ import "./index.css";
 
 function App() {
   const [step, setStep] = useState(1);
+  const stepItems = ["", "Dream", "Believe", "Achieve"]
 
   function handleNext() {
     if (step < 3) setStep(step + 1);
@@ -17,11 +18,11 @@ function App() {
   return (
     <div className="steps">
       <div className="numbers">
-        <div className={step === 1 ? "active" : ""}>1</div>
-        <div className={step === 2 ? "active" : ""}>2</div>
-        <div className={step === 3 ? "active" : ""}>3</div>
+        <div className={step >= 1 ? "active" : ""}>1</div>
+        <div className={step >= 2 ? "active" : ""}>2</div>
+        <div className={step >= 3 ? "active" : ""}>3</div>
       </div>
-      <p className="message">Step {step}: Dream</p>
+      <p className="message">Step {step}: {stepItems[step]}</p>
       <div className="buttons">
         <button
           onClick={handlePrev}
